@@ -1,5 +1,5 @@
 const qwerty = document.querySelector('querty');
-const phrases = document.querySelector('phrase');
+const phrase = document.querySelector('phrase');
 const missed = 0;
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('btn__reset');
@@ -34,8 +34,12 @@ function getRandomPhraseAsArray(arr) {
     randomPhrase = playerPhrases[(Math.floor(Math.random()* playerPhrases.length))];
     newPhrase = ranbomPhrase.split('');
     return newPhrase;
+};
 
+//set up function addPhraseToDisplay
 
+function addPhraseToDisplay() {
+    let phrases = getRandomPhraseAsArray();
 //    for (var i = 0; i < arr.length; i += 1) {
 //        if (qwerty.addEventListener ('click', () => {
 //                qwerty[i] === phrases;
