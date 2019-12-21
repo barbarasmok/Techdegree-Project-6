@@ -21,6 +21,11 @@ phrases = [
 //set up function getRandomPhraseAsArray
 
 function getRandomPhraseAsArray(arr) {
+    for (var i = 0; i < arr.length; i += 1) {
 
-    
+
+    }
+
 }
+
+getRandomPhraseAsArray(phrases);
