@@ -1,6 +1,7 @@
 const qwerty = document.querySelector('querty');
 const phrases = document.querySelector('phrase');
 const missed = 0;
+const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('btn__reset');
 const start = document.querySelector('start');
 const finalWiner = document.querySelector('finalWinner');
@@ -8,7 +9,15 @@ const finalWiner = document.querySelector('finalWinner');
 
 //hide the display start class once you click the start button
 startButton.addEventListener ('click', () => {
-    start.style.display = 'none';
+    let button = document.getElementsByTagName('button');
+    if (startButton.textContent === 'Start Game') {
+        overlay.style.display = 'none';
+    } else if {
+        overlay.style.display = 'none';
+        reset();
+    }
+
+
 } );
 
 //set up an array
@@ -29,8 +38,7 @@ function getRandomPhraseAsArray(arr) {
                 const winnerButton = document.createElement('button');
                 button.textContent = 'winner';
                 finalWinner.appendChild('winnerButton');    
-            });  
-        } else {
+            }); else {
             const loserButton = document.createElement('button');
             button.textContent = 'try again';
             finalWinner.appendChild('loserButton');
