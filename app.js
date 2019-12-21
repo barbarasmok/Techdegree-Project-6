@@ -44,6 +44,18 @@ function addPhraseToDisplay() {
         let li = document.createElement('li');
         ul.appendChild(li);
 
+        //check to see if the phrase is not empty
+        if (phrases[i]) !== ' ' {
+            //add new class
+            li.className = 'letter';
+            li.textContent = phrases[i];
+
+        } else {
+            
+        }
+
+}
+
 //        if (qwerty.addEventListener ('click', () => {
 //                qwerty[i] === phrases;
 //                 const winnerButton = document.createElement('button');
@@ -56,6 +68,6 @@ function addPhraseToDisplay() {
 //             loserButton.style.display = 'none';
 //         }
 //     }
-}
+
 
 getRandomPhraseAsArray(phrases);
