@@ -2,19 +2,13 @@ const qwerty = document.querySelector('querty');
 const phrase = document.querySelector('phrase');
 const missed = 0;
 const overlay = document.getElementById('#overlay');
-const startButton = document.querySelector('btn__reset');
+const startButton = document.querySelector('btn__resest');
 const start = document.querySelector('start');
 const finalWiner = document.querySelector('finalWinner');
 
-
 //hide the display start class once you click the start button
-startButton.addEventListener ('click', () => {
-    if (startButton.textContent === 'Start Game') {
-        overlay.style.display = 'none';
-    } else if (start.Button.textContent === 'Play Again'){
-        overlay.style.display = 'none';
-        reset();
-    }
+startButton.addEventListener('click', () => {
+    overlay.style.display = 'none';
 });
 
 
@@ -30,44 +24,32 @@ phrases = [
 //set up function getRandomPhraseAsArray
 
 function getRandomPhraseAsArray(arr) {
-    randomPhrase = playerPhrases[(Math.floor(Math.random()* playerPhrases.length))];
-    newPhrase = ranbomPhrase.split('');
-    return newPhrase;
+    randomPhrase = arr[(Math.floor(Math.random() * arr.length)];
+    return randomPhrase.split('');
 };
+
+const randomPhraseLetters = getRandomPhraseAsArray(phrases);
 
 //set up function addPhraseToDisplay
 
-function addPhraseToDisplay() {
+function addPhraseToDisplay(arr) {
     let phrases = getRandomPhraseAsArray(arr);
     for (var i = 0; i < phrases.length; i ++) {
         let ul = document.getElementsByTagName('ul');
         let li = document.createElement('li');
         ul.appendChild(li);
-
+        li.textContent = randomPhraseLetters[i];
         //check to see if the phrase is not empty
-        if (phrases[i]) !== ' ' {
+        if (phrases[i] !== ' ') {
             //add new class
             li.className = 'letter';
-            li.textContent = phrases[i];
-
         } else {
-            
+            li.className = 'space';
         }
-
+    }
 }
 
-//        if (qwerty.addEventListener ('click', () => {
-//                qwerty[i] === phrases;
-//                 const winnerButton = document.createElement('button');
-//                 button.textContent = 'winner';
-//                 finalWinner.appendChild('winnerButton');    
-//             }); else {
-//             const loserButton = document.createElement('button');
-//             button.textContent = 'try again';
-//             finalWinner.appendChild('loserButton');
-//             loserButton.style.display = 'none';
-//         }
-//     }
+addPhraseToDisplay(randomPhraseLetters);
 
+//set up the ckeckletter function
 
-getRandomPhraseAsArray(phrases);
