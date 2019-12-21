@@ -24,7 +24,7 @@ phrases = [
 //set up function getRandomPhraseAsArray
 
 function getRandomPhraseAsArray(arr) {
-    randomPhrase = arr[(Math.floor(Math.random() * arr.length)];
+    randomPhrase = arr[Math.floor(Math.random() * arr.length)];
     return randomPhrase.split('');
 };
 
