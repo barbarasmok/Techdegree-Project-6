@@ -16,9 +16,8 @@ startButton.addEventListener ('click', () => {
         overlay.style.display = 'none';
         reset();
     }
+});
 
-
-} );
 
 //set up an array
 phrases = [
@@ -32,19 +31,24 @@ phrases = [
 //set up function getRandomPhraseAsArray
 
 function getRandomPhraseAsArray(arr) {
-    for (var i = 0; i < arr.length; i += 1) {
-        if (qwerty.addEventListener ('click', () => {
-                qwerty[i] === phrases;
-                const winnerButton = document.createElement('button');
-                button.textContent = 'winner';
-                finalWinner.appendChild('winnerButton');    
-            }); else {
-            const loserButton = document.createElement('button');
-            button.textContent = 'try again';
-            finalWinner.appendChild('loserButton');
-            loserButton.style.display = 'none';
-        }
-    }
+    randomPhrase = playerPhrases[(Math.floor(Math.random()* playerPhrases.length))];
+    newPhrase = ranbomPhrase.split('');
+    return newPhrase;
+
+
+//    for (var i = 0; i < arr.length; i += 1) {
+//        if (qwerty.addEventListener ('click', () => {
+//                qwerty[i] === phrases;
+//                 const winnerButton = document.createElement('button');
+//                 button.textContent = 'winner';
+//                 finalWinner.appendChild('winnerButton');    
+//             }); else {
+//             const loserButton = document.createElement('button');
+//             button.textContent = 'try again';
+//             finalWinner.appendChild('loserButton');
+//             loserButton.style.display = 'none';
+//         }
+//     }
 }
 
 getRandomPhraseAsArray(phrases);
