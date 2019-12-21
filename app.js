@@ -18,3 +18,9 @@ phrases = [
     'Love is everywhere'
 ];
 
+//set up function getRandomPhraseAsArray
+
+function getRandomPhraseAsArray(arr) {
+
+    
+}
