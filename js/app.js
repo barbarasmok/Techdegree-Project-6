@@ -5,6 +5,7 @@ const startButton = document.querySelector('.btn__reset');
 const button = document.getElementsByClassName('button');
 const li = document.getElementsByClassName('letter');
 const scoreboard = document.getElementById('scoreboard');
+const overlayTitle = document.querySelector('.title');
 const missed = 0;
 
 //hide the display start class once you click the start button
@@ -86,3 +87,19 @@ qwerty.addEventListener('click', (e) => {
 
 
 //set up the checkWin function
+function checkWin() {
+    const NumberOfLetters = li.length;
+    const numberOfShows = document.getElementsByClassName('show').length;
+    if (numberOfLetters === numberOfShows) {
+        overlay.className = "win";
+        overlay.style.display = "flex";
+        overlayTitle.textContent = "CONGRATULATIONS, YOU WON";
+        startButton.style.display = "none";
+    } else if (missed > 4) {
+        overlay.className = "lose";
+        overlay.style.display = "flex";
+        overlayTitle.textContent = "Please try again! Reload the page to start over";
+        startButton.style.display = "none";
+
+    }
+}
