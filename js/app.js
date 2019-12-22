@@ -38,6 +38,7 @@ function addPhraseToDisplay(arr) {
     for (var i = 0; i < arr.length; i ++) {
         let ul = document.getElementsByTagName('ul');
         let li = document.createElement('li');
+        ul.appendChild(li);
         //check to see if the phrase is not empty
         if (arr[i] !== ' ') {
             //add new class
@@ -45,7 +46,6 @@ function addPhraseToDisplay(arr) {
         } else {
             li.className = 'space';
         }
-        ul.appendChild(li);
         li.textContent = arr[i];
     }
 }
