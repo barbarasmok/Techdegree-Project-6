@@ -1,5 +1,5 @@
 const qwerty = document.getElementById('qwerty');
-const phrase = document.querySelector('phrase');
+const phrase = document.getElementById('phrase');
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
 const button = document.getElementsByClassName('button');
@@ -95,7 +95,7 @@ function checkWin() {
         overlay.style.display = "flex";
         overlayTitle.textContent = "CONGRATULATIONS, YOU WON";
         startButton.style.display = "none";
-    } else if (missed >= 5) {
+    } else if (missed > 4) {
         overlay.className = "lose";
         overlay.style.display = "flex";
         overlayTitle.textContent = "Please try again! Reload the page to start over";
