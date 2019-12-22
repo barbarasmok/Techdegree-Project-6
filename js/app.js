@@ -3,10 +3,10 @@ const phrase = document.getElementById('phrase');
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
 const button = document.getElementsByClassName('button');
-const letters = document.getElementsByClassName('letter');
+const letter = document.getElementsByClassName('letter');
 const scoreboard = document.getElementById('scoreboard');
 const overlayTitle = document.querySelector('.title');
-const missed = 0;
+let missed = 0;
 
 //hide the display start class once you click the start button
 startButton.addEventListener('click', (e) => {
@@ -57,9 +57,9 @@ addPhraseToDisplay(randomPhraseLetters);
 //set up the ckeckletter function
 function checkLetter(button) {
     let match = null;
-    for (let i = 0; i < letters.length; i ++) {
-        if (button === letters[i].textContent.toLowerCase()) {
-            letters[i].classList.add('show');
+    for (let i = 0; i < letter.length; i ++) {
+        if (button === letter[i].textContent.toLowerCase()) {
+            letter[i].classList.add('show');
             match = button.textContent;
         }
     }
