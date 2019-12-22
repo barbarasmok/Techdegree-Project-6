@@ -6,8 +6,9 @@ const missed = 0;
 const finalWiner = document.querySelector('finalWinner');
 
 //hide the display start class once you click the start button
-startButton.addEventListener('click', (overlay) => {
+startButton.addEventListener('click', (e) => {
     overlay.style.display = "none";
+    event.preventDefault();
 });
 //startButton.addEventListener('click', () => {
     //overlay.style.display = "none";
