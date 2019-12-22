@@ -88,7 +88,7 @@ qwerty.addEventListener('click', (e) => {
 
 //set up the checkWin function
 function checkWin() {
-    const numberOfLetters = letters.length;
+    const numberOfLetters = letter.length;
     const numberOfShows = document.getElementsByClassName('show').length;
     if (numberOfLetters === numberOfShows) {
         overlay.className = "win";
