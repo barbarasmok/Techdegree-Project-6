@@ -6,7 +6,6 @@ const missed = 0;
 const finalWiner = document.querySelector('finalWinner');
 
 //hide the display start class once you click the start button
-
 startButton.addEventListener('click', (overlay) => {
     overlay.style.display = "none";
 });
@@ -24,8 +23,8 @@ phrases = [
     'Love is everywhere'
 ];
 
-//set up function getRandomPhraseAsArray
 
+//set up function getRandomPhraseAsArray
 function getRandomPhraseAsArray(arr) {
     randomPhrase = arr[Math.floor(Math.random() * arr.length)];
     return randomPhrase.split('');
@@ -33,8 +32,8 @@ function getRandomPhraseAsArray(arr) {
 
 const randomPhraseLetters = getRandomPhraseAsArray(phrases);
 
-//set up function addPhraseToDisplay
 
+//set up function addPhraseToDisplay
 function addPhraseToDisplay(arr) {
     let phrases = getRandomPhraseAsArray(arr);
     for (var i = 0; i < phrases.length; i ++) {
@@ -53,6 +52,7 @@ function addPhraseToDisplay(arr) {
 }
 
 addPhraseToDisplay(randomPhraseLetters);
+
 
 //set up the ckeckletter function
 
