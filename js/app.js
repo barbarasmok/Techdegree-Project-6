@@ -36,7 +36,7 @@ const randomPhraseLetters = getRandomPhraseAsArray(phrases);
 //set up function addPhraseToDisplay
 function addPhraseToDisplay(arr) {
     for (var i = 0; i < arr.length; i ++) {
-        let ul = document.getElementsByTagName('ul');
+        let ul = document.querySelector('ul');
         let li = document.createElement('li');
         ul.appendChild(li);
         //check to see if the phrase is not empty
@@ -66,7 +66,7 @@ function checkLetter(button) {
 };
 
 
-//adding the event listener to the keyboard
+//adding the event listener to the keyboard + counting the missed guesses in the game
 qwerty.addEventListener('click', (e) => {
     const button = e.target;
     if (button.tagName === 'BUTTON') {
@@ -80,6 +80,9 @@ qwerty.addEventListener('click', (e) => {
             match = button.textContent;
             missed += 1;
         }
-        didYouWinOrLose();
+        checkWin();
     }
 });
+
+
+//set up the checkWin function
