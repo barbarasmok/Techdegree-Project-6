@@ -1,15 +1,18 @@
+const overlay = document.getElementById('overlay');
+const startButton = document.querySelector('btn__reset');
 const qwerty = document.querySelector('querty');
 const phrase = document.querySelector('phrase');
 const missed = 0;
-const overlay = document.getElementById('overlay');
-const startButton = document.querySelector('btn__reset');
-const start = document.querySelector('start');
 const finalWiner = document.querySelector('finalWinner');
 
 //hide the display start class once you click the start button
-startButton.addEventListener('click', (e) => {
-    overlay.style.display = 'none';
+
+startButton.addEventListener('click', (overlay) => {
+    overlay.style.display = "none";
 });
+//startButton.addEventListener('click', () => {
+    //overlay.style.display = "none";
+//});
 
 
 //set up an array
