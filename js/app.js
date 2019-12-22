@@ -3,6 +3,8 @@ const phrase = document.querySelector('phrase');
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
 const button = document.getElementsByClassName('button');
+const li = document.getElementsByClassName('letter');
+const scoreboard = document.getElementById('scoreboard');
 const missed = 0;
 
 //hide the display start class once you click the start button
@@ -62,3 +64,22 @@ function checkLetter(button) {
     }
     return match; 
 };
+
+
+//adding the event listener to the keyboard
+qwerty.addEventListener('click', (e) => {
+    const button = e.target;
+    if (button.tagName === 'BUTTON') {
+        button.classList.add('chosen');
+        button.setAttribute('disabled', true);
+        const letterFound = checkLetter(button.textContent.toLowerCase());
+        const ol = document.querySelector('.olElement');
+        const tries = document.getElementsByClassName('tries');
+        if (letterFound === null) {
+            ol.removeChild(tries[0]);
+            match = button.textContent;
+            missed += 1;
+        }
+        didYouWinOrLose();
+    }
+});
