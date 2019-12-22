@@ -1,4 +1,4 @@
-const overlay = document.getElementById('overlay');
+const overlay = document.getElementById('#overlay');
 const startButton = document.querySelector('btn__reset');
 const qwerty = document.querySelector('querty');
 const phrase = document.querySelector('phrase');
