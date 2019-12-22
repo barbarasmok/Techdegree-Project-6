@@ -2,17 +2,14 @@ const qwerty = document.querySelector('querty');
 const phrase = document.querySelector('phrase');
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
-
+const button = document.getElementsByClassName('button');
 const missed = 0;
 
 //hide the display start class once you click the start button
 startButton.addEventListener('click', (e) => {
     overlay.style.display = "none";
     event.preventDefault();
-  });
-//startButton.addEventListener('click', () => {
-    //overlay.style.display = "none";
-//});
+});
 
 
 //set up an array
@@ -55,4 +52,13 @@ addPhraseToDisplay(randomPhraseLetters);
 
 
 //set up the ckeckletter function
-
+function checkLetter(button) {
+    let match = null;
+    for (let i = 0; i < li.length; i ++) {
+        if (button === li[i].textContent.toLowerCase()) {
+            li[i].classList.add('show');
+            match = button.textContent;
+        }
+    }
+    return match; 
+};
