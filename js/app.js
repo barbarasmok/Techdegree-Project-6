@@ -8,11 +8,19 @@ const scoreboard = document.getElementById('scoreboard');
 const overlayTitle = document.querySelector('.title');
 let missed = 0;
 
+
 //hide the display start class once you click the start button
-startButton.addEventListener('click', (e) => {
-    overlay.style.display = "none";
-    event.preventDefault();
+startButton.addEventListener('click', () => {
+    //overlay.style.display = "none";
+    //event.preventDefault();
+    if (startButton.textContent === 'Start Game') {
+        overlay.style.display = 'none';
+      } else if (startButton.textContent === 'Reset Game') {
+        window.location.reload();
+      }
 });
+
+ 
 
 
 //set up an array
@@ -108,12 +116,15 @@ function checkWin() {
         overlay.className = "win";
         overlay.style.display = "flex";
         overlayTitle.textContent = "CONGRATULATIONS, YOU'RE A WINNER!";
-        startButton.style.display = "none";
+        startButton.textContent = 'Reset Game';
+        phrase.style.display = 'none';
+
     } else if (missed > 4) {
         overlay.className = "lose";
         overlay.style.display = "flex";
         overlayTitle.textContent = "Try again! Reload to start over";
-        startButton.style.display = "none";
-
+        startButton.textContent = 'Reset Game';
+        phrase.style.display = 'none';
     }
 }
+
