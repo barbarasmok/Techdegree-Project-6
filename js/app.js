@@ -59,7 +59,7 @@ function checkLetter(button) {
     let match = null;
     for (let i = 0; i < letters.length; i ++) {
         if (button === letters[i].textContent.toLowerCase()) {
-            letter[i].classList.add('show');
+            letters[i].classList.add('show');
             match = button.textContent;
         }
     }
