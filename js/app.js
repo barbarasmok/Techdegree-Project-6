@@ -3,7 +3,7 @@ const phrase = document.querySelector('phrase');
 const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
 const button = document.getElementsByClassName('button');
-const li = document.getElementsByClassName('letter');
+const letters = document.getElementsByClassName('letter');
 const scoreboard = document.getElementById('scoreboard');
 const overlayTitle = document.querySelector('.title');
 const missed = 0;
@@ -57,9 +57,9 @@ addPhraseToDisplay(randomPhraseLetters);
 //set up the ckeckletter function
 function checkLetter(button) {
     let match = null;
-    for (let i = 0; i < li.length; i ++) {
-        if (button === li[i].textContent.toLowerCase()) {
-            li[i].classList.add('show');
+    for (let i = 0; i < letters.length; i ++) {
+        if (button === letters[i].textContent.toLowerCase()) {
+            letter[i].classList.add('show');
             match = button.textContent;
         }
     }
@@ -88,7 +88,7 @@ qwerty.addEventListener('click', (e) => {
 
 //set up the checkWin function
 function checkWin() {
-    const NumberOfLetters = li.length;
+    const NumberOfLetters = letters.length;
     const numberOfShows = document.getElementsByClassName('show').length;
     if (numberOfLetters === numberOfShows) {
         overlay.className = "win";
