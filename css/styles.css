@@ -4,12 +4,12 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #031831;
-  --color-start: #5b85b7;
-  --color-neutral: #445069;
+  --color-win: #37C795;
+  --color-lose: #FF4A00;
+  --color-start: #37ACC7;
+  --color-neutral: #37C795;
   --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
+  --color-keys: #3B4957;
   --color-keys-light: #E5E5E5;
   --font-size-large: 50px;
   --font-size-medium: 20px;
@@ -73,8 +73,9 @@ button {
 /* Title */
 
 .header {
-  color: var(--color-start);
+  color: #3B4957;
   font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
 }
 
 /* Phrase */
@@ -96,8 +97,8 @@ button {
 }
 
 .show {
-  color: #000;
-  background-color: #76CE82;
+  color: #3B4957;
+  background-color: #37C795;
 }
 
 /* Keyboard */
@@ -116,14 +117,15 @@ button {
 }
 
 .badChoise {
-  background-color: red;
+  background-color: #FF4A00;
+  color: #FFFFFF;
   transition: all 1s;
 }
 
 .btn__reset {
   padding: 14px;
   margin: 50px auto;
-  background: #78CF82;
+  background: #3B4957;
   border-radius: 5px;
   font-size: var(--font-size-medium);
 }

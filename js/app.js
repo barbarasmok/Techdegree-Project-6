@@ -112,7 +112,7 @@ function checkWin() {
     } else if (missed > 4) {
         overlay.className = "lose";
         overlay.style.display = "flex";
-        overlayTitle.textContent = "Try again! Reload the page to start over";
+        overlayTitle.textContent = "Try again! Reload to start over";
         startButton.style.display = "none";
 
     }
