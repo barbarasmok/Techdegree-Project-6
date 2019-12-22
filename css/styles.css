@@ -1,18 +1,19 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
-
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 /* Variables */
 
 :root {
   --color-win: #78CF82;
-  --color-lose: #D94545;
+  --color-lose: #031831;
   --color-start: #5b85b7;
   --color-neutral: #445069;
   --color-neutral-light: #D2D2D2;
   --color-keys: #37474F;
   --color-keys-light: #E5E5E5;
-  --font-size-large: 60px;
+  --font-size-large: 50px;
   --font-size-medium: 20px;
+  --font-size-small: 15px;
   --transition: all .2s ease-in-out;
 }
 
@@ -73,12 +74,14 @@ button {
 
 .header {
   color: var(--color-start);
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Phrase */
 
 .letter {
   font-size: var(--font-size-medium);
+  font-family: 'Open Sans', sans-serif;
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
@@ -112,9 +115,9 @@ button {
 }
 
 .btn__reset {
-  padding: 8px;
+  padding: 14px;
   margin: 50px auto;
-  background: #FFFFFF;
+  background: #78CF82;
   border-radius: 5px;
   font-size: var(--font-size-medium);
 }
@@ -143,7 +146,9 @@ button {
 }
 
 .start a {
-  color: var(--color-win);
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-size-medium);
 }
 
 .win {

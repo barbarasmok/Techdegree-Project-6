@@ -93,12 +93,12 @@ function checkWin() {
     if (numberOfLetters === numberOfShows) {
         overlay.className = "win";
         overlay.style.display = "flex";
-        overlayTitle.textContent = "CONGRATULATIONS, YOU WON";
+        overlayTitle.textContent = "CONGRATULATIONS, YOU'RE A WINNER!";
         startButton.style.display = "none";
     } else if (missed > 4) {
         overlay.className = "lose";
         overlay.style.display = "flex";
-        overlayTitle.textContent = "Please try again! Reload the page to start over";
+        overlayTitle.textContent = "Try again! Reload the page to start over";
         startButton.style.display = "none";
 
     }
