@@ -68,21 +68,35 @@ function checkLetter(button) {
 
 
 //adding the event listener to the keyboard + counting the missed guesses in the game
-qwerty.addEventListener('click', (e) => {
-    const button = e.target;
-    if (button.tagName === 'BUTTON') {
-        button.classList.add('chosen');
-        button.setAttribute('disabled', true);
-        const letterFound = checkLetter(button.textContent.toLowerCase());
-        const ol = document.querySelector('.olElement');
-        const tries = document.getElementsByClassName('tries');
+qwerty.addEventListener("click", function(event) {
+    if (event.target.tagName === "BUTTON") {
+      let chosen = event.target;
+        chosen.className = "chosen";
+        chosen.disabled = true;
+        const letterFound = checkLetter(chosen.textContent);
+
+//SECOND OPTION without the lostHeart image
+//qwerty.addEventListener('click', (e) => {
+    //const button = e.target;
+    //if (button.tagName === 'BUTTON') {
+        //button.classList.add('chosen');
+        //button.setAttribute('disabled', true);
+        //const letterFound = checkLetter(button.textContent.toLowerCase());
+        //const ol = document.querySelector('.olElement');
+        //const tries = document.getElementsByClassName('tries');
+       // if (letterFound === null) {
+        //    ol.removeChild(tries[0]);
+        //    match = button.textContent;
+         //   missed += 1;
+        //}
         if (letterFound === null) {
-            ol.removeChild(tries[0]);
-            match = button.textContent;
-            missed += 1;
-        }
-        checkWin();
+            missed ++;
+            chosen.className = "badChoise";
+            const img = document.querySelectorAll("img");
+            img[missed - 1].src="images/lostHeart.png";
+          }  
     }
+    checkWin();
 });
 
 

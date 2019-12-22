@@ -112,6 +112,12 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  transition: all 1s;
+}
+
+.badChoise {
+  background-color: red;
+  transition: all 1s;
 }
 
 .btn__reset {
