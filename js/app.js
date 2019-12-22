@@ -4,7 +4,6 @@ const overlay = document.getElementById('overlay');
 const startButton = document.querySelector('.btn__reset');
 
 const missed = 0;
-const finalWiner = document.querySelector('finalWinner');
 
 //hide the display start class once you click the start button
 startButton.addEventListener('click', (e) => {
